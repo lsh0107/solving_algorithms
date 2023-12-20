@@ -12,12 +12,8 @@ def solution(cards1, cards2, goal):
             idx += 1
         
         else:
-            if words == goal:
-                answer = 'Yes'
-                return answer
-            else:
-                answer = 'No'
-                return answer
+            answer = 'No'
+            return answer
             
     answer = 'Yes'
     return answer
