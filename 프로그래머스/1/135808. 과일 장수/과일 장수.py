@@ -3,19 +3,7 @@ def solution(k, m, score):
     score.sort()
     bag = []
     cnt = 0
-    while len(score) > 0:
-
-        # if score:
-        #     bag.append(score.pop())
-    
-        # if len(bag) == m:
-        #     answer += min(bag)*m
-        #     bag = []
-        
-        #     if len(score) < m:
-        #         return answer
-        
-        
+    while len(score) > 0:        
         if cnt < m:
             bag.append(score.pop())
             cnt += 1
@@ -27,4 +15,5 @@ def solution(k, m, score):
     
     if len(bag) == m:
         answer += min(bag)*m
+        
     return answer
