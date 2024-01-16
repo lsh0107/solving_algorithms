@@ -11,7 +11,10 @@ def solution(ingredient):
         if idx + 3 <= len(ingredient) and \
             ingredient[idx:idx+4] == [1,2,3,1]:
             answer += 1
-            del ingredient[idx:idx+4]
+            ingredient.pop(idx)
+            ingredient.pop(idx)
+            ingredient.pop(idx)
+            ingredient.pop(idx)
             idx = idx - 2
             length = len(ingredient)
 
