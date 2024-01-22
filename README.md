@@ -1,2 +1,6 @@
-# -
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+## 풀어본 문제를 기록하고 풀이에 대한 느낀점은 개인 블로그를 통해 공유하고 있습니다.
+<br>
+
+### 기술적인 공부 뿐만 아니라 자료구조/알고리즘에 대해서도 꾸준히 공부하는 중입니다.
+### [자료구조/알고리즘](https://hyuggs.tistory.com/category/알고리즘)
+### [기술적 이슈 해결/기초 지식](https://hyuggs.tistory.com/category/데이터엔지니어링)
