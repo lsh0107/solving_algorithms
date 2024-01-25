@@ -27,7 +27,4 @@ def solution(bandage, health, attacks):
             attacks.pop()
             consecutive_heal = 0
 
-    if health <= 0:
-        return -1
-
     return health
