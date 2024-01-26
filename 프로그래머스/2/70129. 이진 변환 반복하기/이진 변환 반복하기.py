@@ -13,6 +13,6 @@ def solution(s):
             length = length // 2
             new_s += str(r)
             
-        s = new_s
-    print(s)
+        s = new_s[::-1]
+
     return answer
