@@ -1,6 +1,6 @@
 def solution(n):
-    ans = 1
-    while n != 1:
+    ans = 0
+    while n:
         if n % 2 == 0:
             n = n / 2
         
