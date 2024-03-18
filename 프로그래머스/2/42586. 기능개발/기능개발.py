@@ -16,9 +16,3 @@ def solution(progresses, speeds):
             done = []
         
     return answer
-
-progresses = [90, 90, 90, 90]
-speeds = [30, 1, 1, 1]
-print(solution(progresses, speeds))
-
-#[1, 3]
