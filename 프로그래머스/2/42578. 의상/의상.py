@@ -3,15 +3,11 @@ def solution(clothes):
     dic = {}
     for i in range(len(clothes)):
         if clothes[i][1] in dic:
-            dic[clothes[i][1]].append(clothes[i][0])
+            dic[clothes[i][1]] += 1
         else:
-            dic[clothes[i][1]] = [clothes[i][0]]
+            dic[clothes[i][1]] = 2
     
-    tot = []
     for key, item in dic.items():
-        tot.append(len(item)+1)
-    
-    print(tot)
-    for i in range(len(tot)):
-        answer = answer * tot[i]
+        answer *= item
+ 
     return answer - 1
