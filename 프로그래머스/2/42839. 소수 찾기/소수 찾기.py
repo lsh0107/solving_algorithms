@@ -5,7 +5,7 @@ def solution(numbers):
     numbers = [num for num in numbers]
     
     for i in range(1, len(numbers)+1):
-        permutation += (list(permutations(numbers, i)))
+        permutation += list(permutations(numbers, i))
     
     permutation = [int(('').join(per)) for per in permutation]
     permutation = list(set(permutation))
