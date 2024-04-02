@@ -11,11 +11,13 @@ def solution(operations):
             
         if cnt != 0 and operation[0] == 'D':
             if max_heap and operation == 'D 1':
-                heapq.heappop(max_heap)
+                min_heap.remove(-heapq.heappop(max_heap))
+                heapq.heapify(min_heap)
                 cnt -= 1
                 
             if min_heap and operation == 'D -1':
-                heapq.heappop(min_heap)
+                max_heap.remove(-heapq.heappop(min_heap))
+                heapq.heapify(max_heap)
                 cnt -= 1
                 
         if cnt == 0:
