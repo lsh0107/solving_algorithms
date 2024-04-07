@@ -19,30 +19,16 @@ def solution(n, t, m, p):
     return answer[:t]
 
 def trans_num(num, n):
-    t = {'10': 'A', '11': 'B', '12': 'C', '13': 'D', '14': 'E', '15': 'F'}
+    
+    t = '0123456789ABCDEF'
     number = ''
     r = 0
-    if n <= 10:
-        while num > 0:
-            r = num % n
-            num = num // n
-            number = str(r) + number
+    while num > 0:
+        r = num % n
+        num = num // n
+        number = t[r] + number
 
-        if len(number) == 0:
-            return '0'
-        
-        return number
-    
-    else:
-        while num > 0:
-            r = num % n
-            num = num // n
-            if r >= 10:
-                number = t[str(r)] + number
-            else:
-                number = str(r) + number
+    if len(number) == 0:
+        return '0'
 
-        if len(number) == 0:
-            return '0'
-        
-        return number
+    return number
