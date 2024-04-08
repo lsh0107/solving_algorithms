@@ -1,5 +1,4 @@
 def solution(dirs):
-    maps = [[False for _ in range(11)] for _ in range(11)]
     answer = 0
     dx, dy = 5, 5
     set_ = set()
