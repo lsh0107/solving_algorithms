@@ -18,5 +18,5 @@ def solution(order):
             i += 1
 
         else:
-            if  (not con or not stack) or (order[i] != stack[-1] and order[i] != con[-1]):
+            if  not stack or (order[i] != stack[-1] and order[i] != con[-1]):
                 return answer
