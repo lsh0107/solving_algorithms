@@ -4,12 +4,8 @@ def solution(n, stations, w):
     s, e = 0, 0
     f = 1
     for i in stations:
-        s = i - w
-        e = i + w
-        if s < 1:
-            s = 1
-        if e > n:
-            e = n
+        s = max(1, i - w)
+        e = min(n, i + w)
         answer += math.ceil((s - f)/(1+2*w))
         f = e + 1
     
