@@ -15,4 +15,4 @@ for i in s:
     ans += (d[i]*31**t) % 1234567891
     t += 1
 
-print(ans)
+print(ans%1234567891)
