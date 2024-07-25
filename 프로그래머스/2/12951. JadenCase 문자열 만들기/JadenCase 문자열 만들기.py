@@ -1,10 +1,4 @@
 def solution(s):
-    strings = list(s.split(' '))
-    ans = []
-    for i in range(len(strings)):
-        if strings[i]:
-            ans.append(strings[i][0].upper() + strings[i][1:].lower())
-        else:
-            ans.append(strings[i])
-    
+    words = s.split(' ')
+    ans = [word[0].upper() + word[1:].lower() if word else word for word in words]
     return ' '.join(ans)
