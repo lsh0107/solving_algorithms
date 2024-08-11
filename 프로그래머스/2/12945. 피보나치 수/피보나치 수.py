@@ -1,8 +1,7 @@
 def solution(n):
-    dp = [0, 1]
-    t = 2
-    while t <= n:
-        t += 1
-        dp.append(dp[-2] + dp[-1])
-        
-    return dp[-1]%1234567
+    answer = 0
+    dp = [0]*(n+1)
+    dp[0], dp[1] = 0, 1
+    for i in range(2, n+1):
+        dp[i] = (dp[i-2] + dp[i-1])%1234567
+    return dp[-1]
