@@ -1,15 +1,10 @@
 def solution(numbers, target):
-    def dfs(index, curr_sum):
-        if index == len(numbers):
-            if curr_sum == target:
+    def dfs(idx, cur_sum):
+        if idx == len(numbers):
+            if cur_sum == target:
                 return 1
-            
             else:
                 return 0
-        
-        return dfs(index+1, curr_sum + numbers[index]) + dfs(index+1, curr_sum - numbers[index])
+        return dfs(idx+1, cur_sum+numbers[idx]) + dfs(idx+1, cur_sum-numbers[idx])
     
-    answer = dfs(0, 0)
-    return answer
-    
-
+    return dfs(0, 0)
