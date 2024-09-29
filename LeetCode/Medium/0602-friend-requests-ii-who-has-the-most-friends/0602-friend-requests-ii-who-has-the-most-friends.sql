@@ -1,0 +1,16 @@
+SELECT      COUNT.ID, 
+            SUM(COUNT.CNT) AS NUM
+FROM        (
+            SELECT      REQUESTER_ID AS ID, COUNT(REQUESTER_ID) AS CNT
+            FROM        REQUESTACCEPTED
+            GROUP BY    REQUESTER_ID
+
+            UNION ALL 
+
+            SELECT      ACCEPTER_ID AS ID, COUNT(ACCEPTER_ID) AS CNT
+            FROM        REQUESTACCEPTED
+            GROUP BY    ACCEPTER_ID
+            ) AS COUNT
+GROUP BY    COUNT.ID
+ORDER BY    NUM DESC
+LIMIT       1
