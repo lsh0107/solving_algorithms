@@ -1,0 +1,9 @@
+SELECT      RN.NAME AS DEPARTMENT, RN.EMPLOYEE AS EMPLOYEE, RN.SALARY
+FROM (
+    SELECT      dept.NAME, emp.NAME AS EMPLOYEE, emp.SALARY,
+                DENSE_RANK() OVER(PARTITION BY dept.NAME ORDER BY emp.SALARY DESC) AS DR
+    FROM        DEPARTMENT dept
+                    JOIN EMPLOYEE emp
+                        ON dept.ID = emp.DEPARTMENTID
+    ) RN
+WHERE RN.DR <= 3
